@@ -4,7 +4,7 @@ Artist APIs in laravel
 ```bash
 composer install
 ```
-- update the .env file with your database details
+- update the `.env` file with your database details
 - then run 'php artisan migrate'
 ```bash
 php artisan migrate
