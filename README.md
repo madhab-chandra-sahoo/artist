@@ -13,7 +13,7 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
-- import the postman collection & update variables as required
+- import the postman collection available in the root folder named `Artists.postman_collection.json` & update variables as required
 
 ## API Endpoints
 ### Get Artists List By Likes In Descending Order
