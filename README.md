@@ -51,10 +51,10 @@ Request
 ```
 
 ### Like Artist
-> `http://localhost:8000/api/artists/like/1` method `GET`
+> `http://localhost:8000/api/artists/like/1` method `PUT`
 
 ### Dislike Artist
-> `http://localhost:8000/api/artists/dislike/1` method `GET`
+> `http://localhost:8000/api/artists/dislike/1` method `PUT`
 
 ## Testcase
 - To run the test case, open command prompt & run
