@@ -15,6 +15,7 @@ php artisan serve
 ```
 - import the postman collection & update variables as required
 
+## API Endpoints
 ### Get Artists List By Likes In Descending Order
 > `http://localhost:8000/api/artists` method `GET`
 
@@ -55,3 +56,8 @@ Request
 ### Dislike Artist
 > `http://localhost:8000/api/artists/dislike/1` method `GET`
 
+## Testcase
+- To run the test case, open command prompt & run
+```
+./vendor/bin/phpunit tests/Unit/ArtistTest.php
+```
