@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "bbd01763-e7dd-40f6-9394-3e3b240c3f7a",
+		"name": "Artists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all artists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/artists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View details of a artist",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "API-KEY",
+						"type": "text",
+						"value": "5bd28c123d02ade"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/artists/{{artist}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists",
+						"{{artist}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a artist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Test Artist\",\n\t\"email\": \"testmail@yopmail.com\",\n\t\"mobile\": \"8596748596\",\n\t\"brand_name\": \"Rock Band\",\n\t\"genre\": \"sad\",\n\t\"location\": \"Hyd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/artists",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a artist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Test Artist\",\n\t\"email\": \"testmail@yopmail.com\",\n\t\"mobile\": \"8596748596\",\n\t\"brand_name\": \"Rock Band\",\n\t\"genre\": \"Rock\",\n\t\"location\": \"Hyd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/artists/{{artist}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists",
+						"{{artist}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like a artist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/artists/like/{{artist}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists",
+						"like",
+						"{{artist}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dislike a artist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/artists/dislike/{{artist}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"artists",
+						"dislike",
+						"{{artist}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
