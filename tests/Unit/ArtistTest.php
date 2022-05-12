@@ -9,6 +9,8 @@ use App\Models\Artist;
 
 class ArtistTest extends TestCase
 {
+    use WithFaker;
+
     /**
      * test create artist.
      *
@@ -17,12 +19,12 @@ class ArtistTest extends TestCase
     public function test_create_artist()
     {
         $response = $this->json('POST','api/artists',[
-            'name' => 'Test artist',
-            'email' => 'test-email3@yopmail.com',
-            'mobile' => '1231231222',
-            'brand_name' => 'test-brand',
-            'genre' => 'test-genre',
-            'location' => 'test-location'
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->companyEmail(),
+            'mobile' => $this->faker->numberBetween(1000000000,9999999999),
+            'brand_name' => $this->faker->company(),
+            'genre' => $this->faker->jobTitle(),
+            'location' => $this->faker->city()
         ]);
 
         //Write the response in laravel.log
@@ -39,12 +41,12 @@ class ArtistTest extends TestCase
     public function test_update_artist()
     {
         $response = $this->json('PUT','api/artists/5',[
-            'name' => 'Test artist',
-            'email' => 'test-email2@yopmail.com',
-            'mobile' => '9630258741',
-            'brand_name' => 'test-brand',
-            'genre' => 'test-genre',
-            'location' => 'test-location'
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->companyEmail(),
+            'mobile' => $this->faker->numberBetween(1000000000,9999999999),
+            'brand_name' => $this->faker->company(),
+            'genre' => $this->faker->jobTitle(),
+            'location' => $this->faker->city()
         ]);
 
         //Write the response in laravel.log
